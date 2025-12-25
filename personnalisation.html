@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personnalisation | EntropyBoards</title>
+  <link rel="stylesheet" href="style_personnalisation.css" />
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <h1 class="logo">EntropyBoards</h1>
+      <nav>
+        <a href="index.html">Accueil</a>
+        <a href="customs.html">Mes Customs</a>
+        <a href="personnalisation.html" class="active">Personnalisation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO PAGE -->
+    <section class="page-hero">
+      <div class="page-hero-content">
+        <h2>Personnalisation</h2>
+        <p>
+          Deux options : acheter un custom prêt à partir (bientôt via la boutique) ou me faire une demande
+          pour créer une planche unique, pensée selon vos envies.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTENU -->
+    <section class="page-content">
+
+      <div class="card">
+        <h3>Deux façons d’obtenir votre custom</h3>
+
+        <div class="split">
+          <div class="split-item">
+            <h4>1) Acheter un custom disponible</h4>
+            <p>
+              Vous choisissez une planche déjà réalisée. Une page boutique sera disponible séparément.
+            </p>
+            <p class="muted">
+              (Si vous n’avez pas de planche et que vous voulez quelque chose rapidement, c’est la solution la plus simple.)
+            </p>
+          </div>
+
+          <div class="split-item">
+            <h4>2) Faire une demande de custom</h4>
+            <p>
+              Vous me décrivez votre projet, et je le réalise sur une planche existante ou sur une planche que je fournis.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Votre planche : vous l’avez déjà ou je la fournis</h3>
+        <ul class="list">
+          <li>
+            <strong>Vous avez déjà une planche</strong> (bon ou mauvais état) : je m’occupe de la restauration (si besoin) puis du custom
+            selon vos envies.
+          </li>
+          <li>
+            <strong>Vous n’avez pas de planche</strong> : je peux soit acheter une planche neuve brute, soit partir sur une
+            planche de récupération (moins chère).
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Le design : idée précise ou univers à explorer</h3>
+        <ul class="list">
+          <li>
+            <strong>Vous avez une idée claire</strong> (voire un dessin / croquis) : on part de votre base et on ajuste ensemble.
+          </li>
+          <li>
+            <strong>Vous avez un univers, des inspirations, des idées en vrac</strong> : je vous propose plusieurs pistes de dessins,
+            puis on affine jusqu’à obtenir un design final.
+          </li>
+        </ul>
+        <p class="muted">
+          Je suis entièrement ouvert à la discussion : références, couleurs, symboles, styles, messages… tout se construit ensemble.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Rouler ou décorer ?</h3>
+        <p>
+          Pensez à préciser si la planche est destinée à être <strong>décorative</strong> ou <strong>faite pour rider</strong>.
+          Cela influe sur la finition (protection/vernis), la durabilité et donc directement sur le choix de la planche initiale.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Prix & devis</h3>
+        <p>
+          Les prix varient selon l’état de la planche, le type de planche (récup,neuve), la complexité du design, et la finition.
+          Une fois votre demande reçue, je vous envoie un <strong>devis</strong> adapté à votre projet.
+        </p>
+      </div>
+
+      <!-- FORMULAIRE -->
+      <div class="card">
+        <h3>Demande de custom (devis)</h3>
+        <p class="muted">
+          Répondez aux questions ci-dessous. Vous pouvez aussi ajouter des détails, des références, ou un lien vers vos inspirations.
+        </p>
+
+        <!-- Formulaire sans backend : à connecter plus tard -->
+        <form class="form" action="https://formspree.io/f/mojazdry" method="POST">
+          
+          <!-- Objet du mail -->
+          <input type="hidden" name="_subject" value="Nouvelle demande de custom — EntropyBoards">
+
+          <!-- Anti-spam (champ invisible : les robots le remplissent, les humains non) -->
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- (Optionnel) Redirection après envoi : crée une page merci.html si tu veux -->
+          <!--
+          <input type="hidden" name="_next" value="https://TON-USERNAME.github.io/TON-REPO/merci.html">
+          -->
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Nom / Prénom</label>
+              <input id="name" name="name" type="text" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="votre@email.com" required>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="board">1) Voulez-vous un custom sur une planche déjà en votre possession ?</label>
+            <select id="board" name="board" required>
+              <option value="" disabled selected>Choisir une option</option>
+              <option value="oui">Oui, j’ai déjà une planche</option>
+              <option value="non">Non, je n’ai pas de planche</option>
+            </select>
+            <p class="help">
+              Si oui : précisez l’état (bon / moyen / mauvais) dans “Détails”.
+              Si non : indiquez “neuve brute” ou “récup” dans “Détails”.
+            </p>
+          </div>
+
+          <div class="form-field">
+            <label for="design">2) Avez-vous déjà un design établi, clair et précis ?</label>
+            <select id="design" name="design" required>
+              <option value="" disabled selected>Choisir une option</option>
+              <option value="oui">Oui, j’ai un design précis (croquis / idée claire)</option>
+              <option value="non">Non, je veux explorer un univers / des inspirations</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="usage">3) C’est un custom décoratif ou pour rider ?</label>
+            <select id="usage" name="usage" required>
+              <option value="" disabled selected>Choisir une option</option>
+              <option value="deco">Décoratif</option>
+              <option value="rider">Pour rider</option>
+              <option value="lesdeux">Je ne sais pas encore</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="details">Détails / inspirations</label>
+            <textarea id="details" name="details" rows="6"
+              placeholder="Décrivez votre univers, vos références (sports, artistes, couleurs), ce que vous aimez / n’aimez pas, l’état de la planche, etc."
+              required></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="links">Liens (optionnel)</label>
+            <input id="links" name="links" type="text" placeholder="Lien Pinterest / Instagram / Drive…">
+          </div>
+
+          <button class="btn primary" type="submit">Envoyer la demande</button>
+
+          <p class="muted small">
+            Vous recevrez une réponse par email dès que possible.
+          </p>
+        </form>
+
+      </div>
+
+      <!-- INFO IMPORTANTE -->
+      <div class="notice">
+        <h4> ⚠️ Info importante ⚠️ </h4>
+        <p>
+          Étant encore étudiant, mon temps est limité. Les délais peuvent donc varier en fonction de ma charge de travail.
+          Vous serez bien évidemment prévenu des délais estimés au moment de la prise en charge de votre demande.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EntropyBoards — Custom Skateboards</p>
+  </footer>
+
+</body>
+</html>
