@@ -51,6 +51,41 @@ nav a.active {
   opacity: 1;
 }
 
+.header-content {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Bloc droite */
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Icône Instagram */
+.instagram-link {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.instagram-link img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.instagram-link:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+
 /* HERO */
 .hero {
   background: linear-gradient(to bottom, #000 0%, #000000 60%, #000000 60%);
