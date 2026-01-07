@@ -306,13 +306,45 @@ footer {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE (MOBILE)
 ========================= */
 @media (max-width: 900px) {
-  nav a {
-    margin-left: 15px;
+
+  /* HEADER */
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
 
+  .header-right {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  .instagram-link {
+    margin-left: 0;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  /* LAYOUT */
   .split {
     grid-template-columns: 1fr;
   }
@@ -325,11 +357,17 @@ footer {
     padding: 22px;
   }
 
+  /* HERO */
   .page-hero {
     padding: 55px 0 30px;
   }
 
   .page-hero h2 {
     font-size: 2rem;
+  }
+
+  /* Lisibilité (optionnel mais conseillé sur mobile) */
+  p {
+    text-align: left;
   }
 }

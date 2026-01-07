@@ -11,7 +11,7 @@
 
   <header class="header">
     <div class="header-content">
-      <div class="logo">EntropyBoards</div>
+      <a class="logo" href="index.html">EntropyBoards</a>
 
       <div class="header-right">
         <nav>
@@ -22,6 +22,7 @@
 
         <a href="https://www.instagram.com/entropyboards"
           class="instagram-link"
+          rel="noopener noreferrer"
           target="_blank">
           <img src="image_illustration/icone_insta.png" alt="Instagram">
         </a>
@@ -128,7 +129,7 @@
           <input type="hidden" name="_subject" value="Nouvelle demande de custom — EntropyBoards">
 
           <!-- Anti-spam (champ invisible : les robots le remplissent, les humains non) -->
-          <input type="text" name="_gotcha" style="display:none">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
 
           <!-- (Optionnel) Redirection après envoi : crée une page merci.html si tu veux -->
           <!--
