@@ -260,10 +260,46 @@ footer {
    RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-  nav a {
-    margin-left: 15px;
+
+  /* Header */
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
 
+  .header-right {
+    margin-left: 0;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  .instagram-link {
+    margin-left: 0;
+  }
+
+  .logo {
+    text-align: center;
+  }
+
+  /* Lisibilité (optionnel mais souvent mieux sur mobile) */
+  p {
+    text-align: left;
+  }
+
+  /* Hero */
   .custom-hero {
     padding: 55px 0 35px;
   }
@@ -272,10 +308,12 @@ footer {
     font-size: 2rem;
   }
 
+  /* Sections */
   .custom-section {
     margin: 55px auto;
   }
 
+  /* Avant / après */
   .before-after {
     grid-template-columns: 1fr;
   }
@@ -284,85 +322,45 @@ footer {
     height: 280px;
   }
 
+  /* Galerie */
   .gallery {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .gallery img {
     height: 280px;
   }
-}
 
-/* LIGHTBOX */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
+  /* Presentation (tes blocs image + texte) */
+  .presentation {
+    margin: 55px auto;
+  }
 
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-}
+  .presentation h3 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
 
-.lightbox:target {
-  display: flex;
-}
+  .presentation-block {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 40px;
+    align-items: stretch;
+  }
 
-.lightbox-close {
-  position: absolute;
-  inset: 0;
-}
+  .presentation-block img {
+    width: 100%;
+    max-width: none;
+  }
 
-/* UX */
-.before-after img {
-  cursor: zoom-in;
-}
+  .presentation-block p {
+    width: 100%;
+  }
 
-/*PRESENTZTION*/
-.presentation {
-  width: 90%;
-  max-width: 900px;
-  margin: 80px auto;
-}
-
-.presentation h3 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.presentation p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.presentation-block {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 80px;
-}
-
-.presentation-block img {
-  width: 40%;
-  max-width: 420px;
-  border-radius: 4px;
-}
-
-.presentation-block p {
-  width: 60%;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #333;
-}
-
-/* Image à droite */
-.image-right {
-  flex-direction: row-reverse;
+  /* Même si tu as .image-right en row-reverse sur desktop,
+     on force en colonne sur mobile */
+  .image-right {
+    flex-direction: column;
+  }
 }
