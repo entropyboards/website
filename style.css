@@ -22,6 +22,10 @@ p {
   text-align: justify;
 }
 
+p_center {
+  text-align: center;
+}
+
 /* HEADER */
 .header {
   background: #000;
@@ -62,6 +66,46 @@ nav a.active {
   display: flex;
   align-items: center;
 }
+
+/* GESTION TELEPHONE*/
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  nav a {
+    margin-left: 0;     /* on enlève le margin desktop */
+    font-size: 0.95rem; /* tu peux réduire un peu si besoin */
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .header {
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-cols {
+    flex-direction: column;
+  }
+}
+
 
 /* Bloc droite */
 .header-right {
