@@ -328,9 +328,14 @@ footer {
     gap: 18px;
   }
 
-  .gallery img {
-    height: 280px;
-  }
+.gallery img {
+  height: 180px;      /* au lieu de 280 */
+  object-fit: cover;  /* garde l’effet vignette */
+}
+
+.gallery figure {
+  overflow: hidden;
+}
 
   /* Presentation (tes blocs image + texte) */
   .presentation {
