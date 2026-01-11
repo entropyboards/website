@@ -17,17 +17,19 @@ body {
   line-height: 1.6;
 }
 
-p {
-  text-align: justify;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
+p {
+  text-align: justify;
+}
+
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* =========================
@@ -53,6 +55,12 @@ img {
   letter-spacing: 1px;
 }
 
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
 nav a {
   margin-left: 25px;
   font-size: 0.95rem;
@@ -65,23 +73,6 @@ nav a.active {
   opacity: 1;
 }
 
-
-.header-content {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-}
-
-/* Bloc droite */
-.header-right {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-/* Icône Instagram */
 .instagram-link {
   margin-left: 25px;
   display: flex;
@@ -100,9 +91,8 @@ nav a.active {
   transform: scale(1.1);
 }
 
-
 /* =========================
-   HERO (PAGE CUSTOM)
+   HERO
 ========================= */
 .custom-hero {
   background: #000;
@@ -149,46 +139,30 @@ nav a.active {
   color: #222;
 }
 
-/* Petits textes optionnels */
-.muted {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* Séparateur subtil optionnel */
-.divider {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-top: 1px solid #e2e2e2;
-}
-
 /* =========================
-   AVANT / APRÈS
+   PRESENTATION BLOCKS
 ========================= */
-.before-after {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 10px;
+.presentation-block {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
 }
 
-.before-after figure {
-  background: #fff;
-  border: 1px solid #e8e8e8;
-  overflow: hidden;
+.presentation-block img {
+  width: 40%;
+  max-width: 420px;
+  border-radius: 4px;
 }
 
-.before-after img {
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
+.presentation-block p {
+  width: 60%;
+  color: #222;
 }
 
-.before-after figcaption {
-  padding: 12px 14px;
-  font-size: 0.9rem;
-  color: #444;
+/* image à droite */
+.image-right {
+  flex-direction: row-reverse;
 }
 
 /* =========================
@@ -219,28 +193,31 @@ nav a.active {
   object-fit: cover;
 }
 
-.gallery figcaption {
-  padding: 12px 14px;
-  font-size: 0.9rem;
-  color: #444;
-}
-
 /* =========================
-   BOUTON RETOUR (optionnel)
-   (si tu ajoutes un lien "Retour aux customs")
+   LIGHTBOX
 ========================= */
-.back-link {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 0.95rem;
-  opacity: 0.8;
-  border-bottom: 1px solid transparent;
-  transition: opacity 0.2s ease, border-color 0.2s ease;
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
 }
 
-.back-link:hover {
-  opacity: 1;
-  border-color: #111;
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox-close {
+  position: absolute;
+  inset: 0;
 }
 
 /* =========================
@@ -294,7 +271,7 @@ footer {
     text-align: center;
   }
 
-  /* Lisibilité (optionnel mais souvent mieux sur mobile) */
+  /* Lisibilité mobile */
   p {
     text-align: left;
   }
@@ -306,47 +283,14 @@ footer {
 
   .custom-hero h2 {
     font-size: 2rem;
+    text-align: center;
   }
 
-  /* Sections */
-  .custom-section {
-    margin: 55px auto;
+  .custom-hero p {
+    text-align: center;
   }
 
-  /* Avant / après */
-  .before-after {
-    grid-template-columns: 1fr;
-  }
-
-  .before-after img {
-    height: 280px;
-  }
-
-  /* Galerie */
-  .gallery {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-.gallery img {
-  height: 180px;      /* au lieu de 280 */
-  object-fit: cover;  /* garde l’effet vignette */
-}
-
-.gallery figure {
-  overflow: hidden;
-}
-
-  /* Presentation (tes blocs image + texte) */
-  .presentation {
-    margin: 55px auto;
-  }
-
-  .presentation h3 {
-    font-size: 1.6rem;
-    margin-bottom: 18px;
-  }
-
+  /* Presentation */
   .presentation-block {
     flex-direction: column;
     gap: 14px;
@@ -363,9 +307,27 @@ footer {
     width: 100%;
   }
 
-  /* Même si tu as .image-right en row-reverse sur desktop,
-     on force en colonne sur mobile */
   .image-right {
     flex-direction: column;
+  }
+
+  /* Galerie */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gallery img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery img {
+    height: 180px;
   }
 }
