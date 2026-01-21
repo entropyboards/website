@@ -78,7 +78,7 @@ nav a.active {
 
 /* Image du logo */
 .logo img {
-  height: 100px;           /* ajuste selon ton logo */
+  height: 200px;           /* ajuste selon ton logo */
   width: auto;
   display: block;
 }
