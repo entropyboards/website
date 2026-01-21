@@ -67,6 +67,23 @@ nav a.active {
   align-items: center;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;              /* espace entre logo et texte */
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+/* Image du logo */
+.logo img {
+  height: 150px;           /* ajuste selon ton logo */
+  width: auto;
+  display: block;
+}
+
+
 /* GESTION TELEPHONE*/
 /* Responsive */
 
