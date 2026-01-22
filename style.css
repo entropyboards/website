@@ -67,6 +67,7 @@ nav a.active {
   align-items: center;
 }
 
+/*----LOGO---- */
 .logo {
   display: flex;
   align-items: center;
@@ -78,7 +79,7 @@ nav a.active {
 
 /* Image du logo */
 .logo img {
-  height: 200px;           /* ajuste selon ton logo */
+  height: 160px;           /* ajuste selon ton logo */
   width: auto;
   display: block;
 }
