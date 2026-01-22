@@ -49,7 +49,7 @@ p_center {
 
 nav a {
   margin-left: 25px;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   opacity: 0.7;
   transition: opacity 0.2s;
 }
@@ -79,7 +79,7 @@ nav a.active {
 
 /* Image du logo */
 .logo img {
-  height: 160px;           /* ajuste selon ton logo */
+  height: 120px;           /* ajuste selon ton logo */
   width: auto;
   display: block;
 }
