@@ -364,14 +364,25 @@ nav a.active {
   color: #fff;
 }
 
-/* cache la checkbox */
+/*=========================
+Guide taille
+=========================*/
+/* GUIDE DES TAILLES */
 #size-guide-toggle {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+  display: none !important;
 }
 
-/* texte cliquable */
+.size-guide-images {
+  display: none !important;
+  margin-top: 18px;
+  gap: 20px;
+}
+
+#size-guide-toggle:checked ~ .size-guide-images {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
 .size-guide-link {
   display: inline-block;
   margin-top: 6px;
@@ -381,27 +392,12 @@ nav a.active {
   border-bottom: 1px solid #000;
 }
 
-/* images cachées par défaut */
-.size-guide-images {
-  display: none;
-  margin-top: 18px;
-  gap: 20px;
-}
-
-/* affiche quand on clique */
-#size-guide-toggle:checked ~ .size-guide-images {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* style images */
 .size-guide-images img {
   width: 300px;
   max-width: 100%;
   border: 1px solid #ddd;
   background: #fff;
 }
-
 /* =========================
    FOOTER
 ========================= */
