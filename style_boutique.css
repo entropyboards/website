@@ -369,7 +369,10 @@ Guide taille
 =========================*/
 /* GUIDE DES TAILLES */
 #size-guide-toggle {
-  display: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .size-guide-images {
