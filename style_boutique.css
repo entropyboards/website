@@ -366,7 +366,9 @@ nav a.active {
 
 /* cache la checkbox */
 #size-guide-toggle {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* texte cliquable */
