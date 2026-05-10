@@ -401,6 +401,14 @@ Guide taille
   border: 1px solid #ddd;
   background: #fff;
 }
+
+.size-warning {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #303030;
+  text-align: center;
+  line-height: 1.5;
+}
 /* =========================
    FOOTER
 ========================= */
