@@ -364,6 +364,42 @@ nav a.active {
   color: #fff;
 }
 
+/* cache la checkbox */
+#size-guide-toggle {
+  display: none;
+}
+
+/* texte cliquable */
+.size-guide-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 1px solid #000;
+}
+
+/* images cachées par défaut */
+.size-guide-images {
+  display: none;
+  margin-top: 18px;
+  gap: 20px;
+}
+
+/* affiche quand on clique */
+#size-guide-toggle:checked ~ .size-guide-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* style images */
+.size-guide-images img {
+  width: 300px;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
 /* =========================
    FOOTER
 ========================= */
